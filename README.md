@@ -1,3 +1,2 @@
-# Angular1-QuickStart
-Angular 1 Hello Word Example using bower
-"# angular1-controller" 
+# angular1-controller
+Basic Controller demo with dynamic list

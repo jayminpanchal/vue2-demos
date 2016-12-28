@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binding HTML | Vue 2 JS Tutorial</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-on:input="cssClass=$event.target.value"/>
+    <p >Class : {{cssClass}}</p>
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            cssClass: ""
+        }
+    });
+</script>
+</html>

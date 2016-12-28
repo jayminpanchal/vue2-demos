@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event & Methods | Vue 2 JS Tutorial</title>
+</head>
+<body>
+<div id="app">
+    <p>{{title}}</p>
+    <button v-on:click="title='Title Changed'">Change Title</button>
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            title: "Hello World"
+        }
+    });
+</script>
+</html>

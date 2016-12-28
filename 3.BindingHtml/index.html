@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Binding HTML | Vue 2 JS Tutorial</title>
+    <style type="text/css">
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
     <input type="text" v-on:input="cssClass=$event.target.value"/>
-    <p >Class : {{cssClass}}</p>
+    <p v-bind:class="cssClass">Class : {{cssClass}}</p>
 </div>
 </body>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>

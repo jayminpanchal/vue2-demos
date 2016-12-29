@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filters | Vue 2 JS Tutorial</title>
+</head>
+<body>
+<div id="app">
+    <p>{{ theTitle | uppercase }}</p>
+    <p>{{ title2 | lowercase }}</p>
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    Vue.filter('uppercase', function (value) {
+        return value.toUpperCase();
+    });
+    new Vue({
+        el: '#app',
+        data: {
+            theTitle: "Hello World",
+            title2: "DEMO TEXT",
+        },
+        filters: {
+            lowercase: function (value) {
+                return value.toLowerCase();
+            }
+        }
+    });
+</script>
+</html>

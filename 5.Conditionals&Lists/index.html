@@ -9,6 +9,13 @@
     <button @click="show = !show">Show/Hide</button>
     <p v-if="show">I'm part-time visible!</p>
     <p v-else>Am I visible?</p>
+    <p v-show="show">Using v-show</p>
+    <ul>
+        <li v-for="(person,i) in persons">
+            {{person.name}} {{person.age}}
+            Position-{{i}}
+        </li>
+    </ul>
     <hr/>
 </div>
 </body>
@@ -17,7 +24,12 @@
     new Vue({
         el: '#app',
         data: {
-            show: true
+            show: true,
+            persons: [
+                {name: 'ABC', age: 20},
+                {name: 'PQR', age: 23},
+                {name: 'XYZ', age: 25}
+            ]
         }
     });
 </script>

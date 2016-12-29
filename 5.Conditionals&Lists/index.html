@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computed Property | Vue 2 JS Tutorial</title>
+</head>
+<body>
+<div id="app">
+    <button @click="show = !show">Show/Hide</button>
+    <p v-if="show">I'm part-time visible!</p>
+    <p v-else>Am I visible?</p>
+    <hr/>
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            show: true
+        }
+    });
+</script>
+</html>

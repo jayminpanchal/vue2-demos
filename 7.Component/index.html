@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Components | Vue 2 JS Tutorial</title>
+    <style>
+        .user {
+            border: 1px solid #ccc;
+            background-color: #ddd;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <app-user/>
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    Vue.component('app-user', {
+        template: '<div><div class="user" v-for="user in users"><p>Username :{{user.name}}</p></div></div>',
+        data: function () {
+            return {
+                users: [
+                    {name: 'ABC', age: 20},
+                    {name: 'PQR', age: 23},
+                    {name: 'XYZ', age: 25}
+                ]
+            };
+        }
+    });
+    new Vue({
+        el: '#app',
+        data: {
+            theTitle: "Hello World",
+            title2: "DEMO TEXT"
+        },
+        //Locally create components
+        /*components: {
+            'app-user': {
+                template: '<div><div class="user" v-for="user in users"><p>Username :{{user.name}}</p></div></div>',
+                data: function () {
+                    return {
+                        users: [
+                            {name: 'ABC', age: 20},
+                            {name: 'PQR', age: 23},
+                            {name: 'XYZ', age: 25}
+                        ]
+                    };
+                }
+            }
+        }*/
+    });
+</script>
+</html>

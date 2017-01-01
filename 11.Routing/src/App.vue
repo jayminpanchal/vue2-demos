@@ -3,7 +3,8 @@
         <h1>{{ msg }}</h1>
         <hr/>
         <router-link to="/">Home</router-link>
-        <router-link to="/users/13">Users</router-link>
+        <router-link to="/users/13">Users 13</router-link>
+        <router-link to="/users/10">Users 10</router-link>
         <hr/>
         <router-view></router-view>
     </div>

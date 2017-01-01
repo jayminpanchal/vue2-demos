@@ -7,7 +7,7 @@ import Home from './Home.vue';
 Vue.use(VueRouter);
 
 const routes = [
-    {path: '/users', component: Users},
+    {path: '/users/:userId', component: Users},
     {path: '/', component: Home}
 ];
 const router = new VueRouter({
